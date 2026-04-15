@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-pipeworx-catalog",
+  "version": "0.1.0",
+  "description": "Pipeworx Catalog MCP — Exposes the full Pipeworx platform to Claude",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "pipeworx-catalog"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-pipeworx-catalog"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
