@@ -2,22 +2,22 @@
 
 Pipeworx Catalog MCP — Exposes the full Pipeworx platform to Claude
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `list_packs` | List all available Pipeworx MCP packs with their slug, name, category, tool count, and gateway URL. This is the master inventory of everything Pipeworx offers. Use this to find packs by category or discover what data sources are available. |
-| `get_pack_tools` | Get the full tool definitions for a specific pack — tool names, descriptions, parameters with types and required flags. Use this before calling a tool to understand its exact interface. |
-| `get_connection_config` | Get the MCP client config JSON for connecting to one or more packs. Returns ready-to-paste config for Claude Desktop, Claude Code CLI command, and the raw gateway URL. |
-| `search_packs` | Search Pipeworx packs by keyword. Searches pack names, descriptions, and tool names. Use when looking for a specific capability (e.g., "translate text", "stock prices", "random jokes"). |
-| `get_platform_status` | Get current Pipeworx platform health — how many packs are live, any outages or degraded services, total tool count. |
-| `search_mcp_directory` | Search the full Pipeworx MCP directory — not just hosted packs but thousands of community MCP servers indexed from across the ecosystem. Use to find MCP servers for specific use cases. |
+| `list_packs` | Browse all available Pipeworx packs. Returns pack names, categories, tool counts, and gateway URLs. Use to discover data sources or explore what\'s available. |
+| `get_pack_tools` | Get tool definitions for a specific pack (e.g., \'weather\', \'stocks\'). Returns tool names, descriptions, parameters, and requirements. Use before calling a tool to verify its interface. |
+| `get_connection_config` | Get MCP setup instructions for connecting to Pipeworx packs. Returns connection details and gateway URLs. Use to configure your environment. |
+| `search_packs` | Search packs by keyword across names, descriptions, and tools (e.g., \'weather\', \'translate\'). Returns matching packs with details. Use to find specific capabilities. |
+| `get_platform_status` | Check Pipeworx platform health and availability. Returns pack count, active tool count, and any service alerts. Use to verify system status before operations. |
+| `search_mcp_directory` | Search thousands of MCP servers by use case (e.g., \'database\', \'email\', \'calendar\'). Returns community and hosted servers. Use to find tools beyond Pipeworx. |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
@@ -29,11 +29,32 @@ Add to your MCP client config:
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use pipeworx-catalog
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Pipeworx Catalog data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
