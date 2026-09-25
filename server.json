@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/pipeworx-catalog",
-  "title": "pipeworx catalog",
+  "title": "Pipeworx Catalog",
   "description": "Pipeworx Catalog MCP — Exposes the full Pipeworx platform to Claude",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/pipeworx-catalog",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-pipeworx-catalog",
