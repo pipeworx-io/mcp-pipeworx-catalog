@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-pipeworx-catalog",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Pipeworx Catalog MCP — Exposes the full Pipeworx platform to Claude",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "pipeworx-catalog",
     "gatewaySlug": "pipeworx-catalog",
-    "sourceHash": "v1-87fe8bda8e4eaf34991b928405762084021305ada80de1e77d55bc042f073df6",
-    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
+    "sourceHash": "v1-bf75b264369385023c4866cdeb338177d8b89a07c9d7630646f6e5e60da40a6b",
+    "sourceCommit": "243a06a6ca2d3b6075325f3b66a1468d0a2eb603"
   }
 }
